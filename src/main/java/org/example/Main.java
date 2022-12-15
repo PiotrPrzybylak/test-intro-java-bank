@@ -34,6 +34,7 @@ public class Main {
             System.out.println(message);
             System.out.println("Excpected: " + expected + " but recieved: " + actual);
             System.out.println();
+            throw new AssertionError(message);
         }
     }
 
