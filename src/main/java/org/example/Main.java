@@ -31,7 +31,7 @@ public class Main {
 
     }
 
-    private static void testAmount(float actual, float expected, int testNumber, String message) {
+    public static void testAmount(float actual, float expected, int testNumber, String message) {
         if (actual != expected) {
             System.out.println("Test failed!");
             System.out.println("Test numer: " + testNumber);
@@ -42,7 +42,7 @@ public class Main {
         }
     }
 
-    private static void testCondition(boolean condition) {
+    public static void testCondition(boolean condition) {
         if (!condition) {
             System.out.println("NOT OK");
         }
