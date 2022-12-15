@@ -7,6 +7,9 @@ public class Main {
 
         Bank bank = new Bank();
 
+        bank.createAccount("PL123");
+        testAmount(bank.getAmount("PL123"), 0, 1, "Wrong amount returned");
+
         bank.deposit("PL123", 30);
         float result = bank.getAmount("PL123");
         testAmount(result, 30, 1, "Wrong amount returned");
@@ -15,6 +18,7 @@ public class Main {
         result = bank.getAmount("PL123");
         testCondition(result == 45);
 
+        bank.createAccount("PL456");
         bank.deposit("PL456", 15);
         result = bank.getAmount("PL456");
         testAmount(result, 15, 3, "Wrong amount returned");
